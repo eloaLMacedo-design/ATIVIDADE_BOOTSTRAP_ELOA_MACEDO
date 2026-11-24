@@ -3,46 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 04</title>
+    <title>Cadastro de Atendimento</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
-<body>
-<<<<<<< HEAD
+
+<body class="bg-light" style="background-image: url(fundo\ do\ desafio\ 04.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed; min-height: 100vh;">
     <!-- BARRA DE MENU -->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">DS • Bootstrap 5</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPortifolio" aria-controls="menuPortifolio" aria-expanded="false" aria-label="Alternar navegação">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse" id="menuPortifolio">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="desafio01.html">Desafio 01</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="desafio02.html">Desafio 02</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="desafio03.html">Desafio 03</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="desafio04.html">Desafio 04</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="desafio05.html">Desafio 05</a>
-          </li>
-        </ul>
-      </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">DS • Bootstrap 5</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPortifolio"
+                aria-controls="menuPortifolio" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPortifolio">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="desafio01.html">Desafio 01</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="desafio02.html">Desafio 02</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="desafio03.html">Desafio 03</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="desafio04.html">Desafio 04</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="desafio05.html">Desafio 05</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+
+                <div class="card shadow-sm p-4">
+                    <h3 class="mb-2">Cadastro de Atendimento</h3>
+                    <p class="text-muted mb-4">
+                        Preencha os dados do cliente e as informações do atendimento.
+                    </p>
+
+                    <form>
+                        <div class="row g-3">
+
+                            <div class="col-sm-6">
+                                <label class="form-label">Nome</label>
+                                <input type="text" class="form-control" placeholder="Digite seu nome" required>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label class="form-label">Sobrenome</label>
+                                <input type="text" class="form-control" placeholder="Digite seu sobrenome" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">E-mail</label>
+                                <input type="email" class="form-control" placeholder="exemplo@email.com" required>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label class="form-label">Telefone / WhatsApp</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">+55</span>
+                                    <input type="tel" class="form-control" placeholder="(00) 00000-0000" required>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label class="form-label">Data do atendimento</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Tipo de serviço</label>
+                                <select class="form-select" required>
+                                    <option value="" selected disabled>
+                                        Escolha uma opção...
+                                    </option>
+                                    <option value="manutencao">Manutenção</option>
+                                    <option value="reparo">Reparo</option>
+                                    <option value="avaliacao">Avaliação</option>
+                                    <option value="consulta">Consulta</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Valor estimado</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">R$</span>
+                                    <input type="number" class="form-control" placeholder="0,00" step="0.01" min="0">
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Observações</label>
+                                <textarea class="form-control" rows="4"
+                                    placeholder="Descreva os detalhes do atendimento..."></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="ciencia" required>
+
+                                    <label for="ciencia" class="form-check-label">
+                                        Estou ciente e confirmo que as informações
+                                        fornecidas estão corretas.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-4">
+                                <button class="btn btn-success w-100" type="submit">
+                                    Cadastrar Atendimento
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
-  
-=======
->>>>>>> 245ac2473110435e87edb87eb6b486e53ae4d784
-    
+
 </body>
+
 </html>
